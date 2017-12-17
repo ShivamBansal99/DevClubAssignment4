@@ -15,6 +15,7 @@ copy()
 				else
 					echo ${3}/${i}
 				fi
+				cp ${1}/${i} $2
 			fi
 		else
 			if [ -z "$deed" ]
@@ -22,10 +23,8 @@ copy()
 				mkdir ${2}/${i}
 			fi
 			check=`ls ${1}/${i}`
-			echo check $check
 			if [ -n "$check" ]
 			then
-				echo not empty ${1}/${i}
 				copy ${1}/${i} ${2}/${i} ${3}/${i}
 			fi
 		fi
