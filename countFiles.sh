@@ -14,7 +14,8 @@ then
 		exit 1;
 	fi
 else
-	files=`ls -a $1 | grep -o ^..*${2}$ |  wc -l`
+	c=\\$2
+	files=`ls -al $1 | grep -o ^-.*${c}$ |  wc -l`
 	if [ "$?" = "0" ]
 	then
 		echo $files
