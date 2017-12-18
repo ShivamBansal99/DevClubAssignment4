@@ -7,7 +7,7 @@ copy()
 	cd $1
 	for i in * #iterates through all files/dir's in the directory
 	do
-		deed=`ls $2 | grep ^$i$`#checks if file/dir is there in second dir
+		deed=`ls $2 | grep ^$i$` #checks if file/dir is there in second dir
 		if [ -f ${1}/${i} ] #checks if the current file/dir is file or not
 		then
 			if [ -z "$deed" ] #if file is not there in second one
