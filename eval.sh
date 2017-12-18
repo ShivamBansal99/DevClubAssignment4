@@ -3,8 +3,8 @@ i=1
 result=0
 while :
 do
-	file=`cat $1 | cut -d$'\n' -f$i`#cuts the file and keeps ith row
-	if [ -z "$file" ] #if ith row is empty breaks through loop
+	file=`cat $1 | cut -d$'\n' -f$i` #cuts the file and keeps ith row
+	if [ -z "$file" ]  #if ith row is empty breaks through loop
 	then
 		break
 	fi
